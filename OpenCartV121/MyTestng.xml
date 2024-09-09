@@ -16,9 +16,12 @@
 		<parameter name="os" value="mac" /> <!--As per requirement we can Configure OS Name here -->
 		<parameter name="browser" value="chrome" /> <!--As per requirement we can Configure Name here -->
 		<classes>
-		    <class name="testCases.TC001_AccountRegistrationTest" />	
-			<class name="testCases.TC002_LoginTest" />
+			<!-- <class name="testCases.TC001_AccountRegistrationTest" />	
+			<class name="testCases.TC002_LoginTest" />-->
 			<!--<class name="testCases.TC003_DataDrivenTest" />-->
+			<!--<class name="testCases.TC004_SearchProduct" /> -->
+			<class name="testCases.TC005_AddToCartTest" />
+
 		</classes>
 	</test> <!--Test -->
 </suite> <!--Suite -->

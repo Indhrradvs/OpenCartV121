@@ -2,9 +2,10 @@
 <Configuration status="WARN">
 
 	<Properties>
-		<!-- basepath is not a keyword, you can put anyname but we need to update 
+		<!-- basepath is not a keyword, you can put anyname but we need to
+		update 
 			accordingly in other places -->
-			
+
 		<Property name="basepath">./logs</Property>
 	</Properties>
 
@@ -19,13 +20,14 @@
 			filePattern="${basepath}/automation-%d{yyyy-mm-dd}.log">
 			<PatternLayout
 				pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
-			<SizeBasedTriggeringPolicy size="5000" /> <!--File size we can change as per need--> 
+			<SizeBasedTriggeringPolicy size="5000" /> <!--File size we can change as per need-->
 		</RollingFile>
 
 	</Appenders>
 
 	<Loggers>
-		<Root level="info"> <!-- Here you can use multiple log levels:(All < Trace < Debug < Info < Warn 
+		<Root level="info"> <!-- Here you can use multiple log levels:(All <
+			Trace < Debug < Info < Warn 
 				<Fatal <Off) -->
 
 			<!-- <AppenderRef ref = "Console"/> It will Generate Logs in Console -->

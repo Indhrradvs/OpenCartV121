@@ -35,6 +35,9 @@ public class HomePage extends BasePage {
 	
 	@FindBy(xpath="//a[text()='Login']")
 	WebElement linkLogin;
+	
+	@FindBy(xpath="//a[normalize-space()='Logout']")
+	WebElement finalLogout;
 
 	//Action Methods for Above WebElements
 	public void clickMyAccount() {
