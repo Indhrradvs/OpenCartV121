@@ -19,7 +19,7 @@
 			<!-- <class name="testCases.TC001_AccountRegistrationTest" />	
 			<class name="testCases.TC002_LoginTest" />-->
 			<!--<class name="testCases.TC003_DataDrivenTest" />-->
-			<!--<class name="testCases.TC004_SearchProduct" /> -->
+			<class name="testCases.TC004_SearchProduct" />
 			<class name="testCases.TC005_AddToCartTest" />
 
 		</classes>
