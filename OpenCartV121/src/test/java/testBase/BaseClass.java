@@ -97,7 +97,9 @@ public class BaseClass {
 			switch (br.toLowerCase()) { // converting browserName to lower case for consistency
 			
 			case "chrome":  //depending on the browser names below cases will execute
-				driver = new ChromeDriver();
+			        ChromeOptions options = new ChromeOptions();
+				options.addArguments("--headless");
+				driver = new ChromeDriver(options);
 				break;
 			
 			case "edge":
