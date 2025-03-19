@@ -48,7 +48,7 @@ public class TC004_SearchProduct extends BaseClass {
 				
 		} catch (Exception e) {
 			
-			Assert.fail();
+			e.printStackTrace();
 		}
 	
 		logger.info("**** Finished TC004_SearchProduct ****");

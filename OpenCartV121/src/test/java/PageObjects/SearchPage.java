@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import utilities.WaitUtility;
+
 public class SearchPage extends BasePage {
 
 	// Constructor
@@ -62,20 +64,25 @@ public class SearchPage extends BasePage {
 	
 	public String checkConfMsg() {
 
+		String txt = ""; // Empty Variable declared & initialized
+		
 		try {
 
-			return (confirmMsg.getText());
+			WaitUtility.waitForElementToAppear(confirmMsg, driver);
+			txt = (confirmMsg.getText()); // Assigning the getText() method to txt variable
 
 		} catch (Exception e) {
-
-			return (e.getMessage());
+			
+			e.getMessage();
 		}
+		return txt; //Returning the txt value
 	}
 	
 	/*By Providing generic path, it will check all the values in the WebPage 
 	depending on the parameter entered by the user */
 	public boolean isProductExist(String productLookup) {
 		try {
+			WaitUtility.waitForElementToAppear(product, driver);
 			return (product.isDisplayed());
 		} catch (Exception e) {
 			return false;

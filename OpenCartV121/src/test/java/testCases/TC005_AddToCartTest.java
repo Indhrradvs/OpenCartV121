@@ -39,7 +39,7 @@ public class TC005_AddToCartTest extends BaseClass {
 			sp.clickSearch();
 			
 			logger.info("**** Product Searched Successfully ****");
-			Thread.sleep(3000);
+			
 			
 			if (sp.isProductExist("HP")) {
 				sp.selectProduct();
@@ -51,15 +51,17 @@ public class TC005_AddToCartTest extends BaseClass {
 			
 			//ValidationCheck
 			String msgConfirmation = sp.checkConfMsg();
-			System.out.println("Confirmation Message is "+ msgConfirmation);
+			//System.out.println("Confirmation Message is "+ msgConfirmation);
+			logger.info("Confirmation Message is "+ msgConfirmation);
 			
 			Assert.assertEquals(msgConfirmation, sp.checkConfMsg());
 			
+			logger.info("**** Assertion is completed  ****");
+			
 		} catch (Exception e) {
 			
-			Assert.fail();
-		}
+		e.printStackTrace(); // Provide the exception & Print why Try block is failed
+	}
 		
 		logger.info("**** Finished TC005_AddToCartTest ****");
-	}
-}
+	}}

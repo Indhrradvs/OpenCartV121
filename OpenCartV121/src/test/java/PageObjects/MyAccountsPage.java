@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import utilities.WaitUtility;
+
 public class MyAccountsPage extends BasePage {
 
 	// Constructor
@@ -30,7 +32,7 @@ public class MyAccountsPage extends BasePage {
 	}
 
 	public void clickLogout() {
-
+		WaitUtility.waitForElementToAppear(linklogout, driver);
 		linklogout.click();
 	}
 

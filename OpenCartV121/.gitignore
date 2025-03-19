@@ -1,0 +1,6 @@
+
+# Avoiding below Files to upload into Github repo
+
+Logs/
+reports/
+test-output/

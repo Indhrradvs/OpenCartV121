@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import utilities.WaitUtility;
+
 public class LoginPage extends BasePage {
 
 	// Constructor
@@ -25,6 +27,7 @@ public class LoginPage extends BasePage {
 	// Action Methods
 
 	public void setEmail(String email) {
+		WaitUtility.waitForElementToAppear(txtEmailAddress, driver);
 		txtEmailAddress.sendKeys(email);
 	}
 
