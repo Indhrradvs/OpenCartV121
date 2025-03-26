@@ -87,7 +87,7 @@ public class ExtentReportManager implements ITestListener {
 		test.log(Status.FAIL, result.getName() + " got failed");
 		test.log(Status.INFO, result.getThrowable().getMessage());
 	
-		//Adding Failue Screenshots to the Report 
+		//Adding Failure Screenshots to the Report 
 		try {
 			String imgPath = new BaseClass().captureScreen(result.getName());
 			//test.addScreenCaptureFromPath("verify_Login_2024.08.23.02.41.30.png");
@@ -109,12 +109,14 @@ public class ExtentReportManager implements ITestListener {
 			//Below code will Open the report automatically after generated
 			String pathOfExtentReport = System.getProperty("user.dir") + "//reports//" + repName;
 			File extentReport = new File(pathOfExtentReport);
+			
+		/* Enable this whenever need to open the browser after test run
 			try {
 				Desktop.getDesktop().browse(extentReport.toURI()); //open the report on browser Automatically
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-		
+		*/ 
 		
 		//If we want to send the report to the team automatically then enable below code
 		
